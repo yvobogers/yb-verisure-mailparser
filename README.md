@@ -1,7 +1,7 @@
 # yb-verisure-mailparser
-AWS Lambda for parsing Verisure email notifications. 
+AWS Lambda for parsing Verisure email notifications for the Yale Doorman smart lock. 
 
-![Yale Doorman](https://www.yale.se/presets/product-slideshow/Yale/YaleSE/produkter/entredorr/Yale%20Doorman%20V2N%20förpackning%20silver%20front%20kant.jpg)
+![Yale Doorman](https://www.yale.se/presets/product-slideshow/Yale/YaleSE/produkter/entredorr/Doorman%20Beslag%20utsida%20-%20364682.jpg)
 
 The Yale Doorman smart lock can be configured to send push notifications to the Verisure app and admin user's email addresses. This AWS lambda can be used to parse those emails, for instance after having stored the emails in S3 using an AWS SES email receiving pipeline. AWS Lambda can now trigger additional logic such as SNS or SQS notifications or, as I've done here, parse the emails and send out a simple JSON message with event name ("Locked", "Unlocked", etc.) and username to an external API endpoint.
 
